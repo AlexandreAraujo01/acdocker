@@ -26,7 +26,7 @@ def gravar():
     cursor = conn.cursor()
     cursor.execute('insert into alunos (nome, email, ra) VALUES (%s, %s, %s)', (nome, email, ra))
     conn.commit()
-  return render_template('aulamvc.html')
+  return render_template('index.html')
 
 
 @app.route('/listar', methods=['POST','GET'])
